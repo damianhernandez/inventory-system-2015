@@ -19,11 +19,11 @@ namespace Inventarios2015.Account
         {
             if (Membership.Provider.ValidateUser(txtUserName.Text.Trim(), txtPassword.Text.Trim()))
             {
-                Response.Write("Usuario validado exitosamente");
+                Server.Transfer("~/Default.aspx");
             }
             else
             {
-                Response.Write("Usuario no validado exitosamente");
+                Response.Write("<div class=\"alert alert-danger\"><b>Error:&nbsp;&nbsp;&nbsp;</b>El usuario y contraseña proporcionados no son validos, por favor verifique sus datos e intentelo mas tarde.</div>");
             }
         }
     }

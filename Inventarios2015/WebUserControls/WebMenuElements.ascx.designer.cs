@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Inventarios2015.Account {
+namespace Inventarios2015.WebUserControls {
     
     
     public partial class WebMenuElements {

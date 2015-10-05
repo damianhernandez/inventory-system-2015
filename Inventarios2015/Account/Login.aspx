@@ -35,11 +35,15 @@
                         <h1>Inicio de Sesi&oacute;n</h1>
                         <div>
                             <asp:TextBox runat ="server" ID="txtUserName" MaxLength="80" placeholder="Email" CssClass="form-control" ValidationGroup="vgLogin" ></asp:TextBox>
-                            <asp:RegularExpressionValidator runat="server" ID="revtxtUserName" ControlToValidate="txtUserName" ErrorMessage="<b>Correo invalido</b><br/>El correo electrónico no tiene el formato correcto" ValidationGroup="vgLogin" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" >*</asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator runat="server" ID="revtxtUserName" ControlToValidate="txtUserName" ErrorMessage="<b>Campo invalido</b><br/>El nombre de usuario debe tener el formato de correo electrónico." ValidationGroup="vgLogin" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" >*</asp:RegularExpressionValidator>
                             <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="revtxtUserNameExt" TargetControlID="revtxtUserName" WarningIconImageUrl="~/images/warning32.png" Width="350px"></ajaxToolkit:ValidatorCalloutExtender>
+                            <asp:RequiredFieldValidator runat="server" ID="rfvtxtUserName" ControlToValidate="txtUserName" ErrorMessage="<b>Campo Requerido.</b><br/>El campo nombre de usuario es obligatorio." ValidationGroup="vgLogin" Display="None">*</asp:RequiredFieldValidator>
+                            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="rfvtxtUserNameext" TargetControlID="rfvtxtUserName" WarningIconImageUrl="~/images/warning32.png" Width="350px"></ajaxToolkit:ValidatorCalloutExtender>
                         </div>
                         <div>
                             <asp:TextBox runat ="server" ID="txtPassword" MaxLength="20" TextMode="Password" placeholder="Password" CssClass="form-control" ValidationGroup="vgLogin"></asp:TextBox>
+                            <asp:RequiredFieldValidator runat="server" ID="rfvtxtPassword" ControlToValidate="txtPassword" ErrorMessage="<b>Campo Requerido.</b><br/>El campo contraseña es obligatorio." ValidationGroup="vgLogin" Display="None">*</asp:RequiredFieldValidator>
+                            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="rfvtxtPasswordExt" TargetControlID="rfvtxtPassword" WarningIconImageUrl="~/images/warning32.png" Width="350px"></ajaxToolkit:ValidatorCalloutExtender>
                         </div>
                         <div>
                             <asp:LinkButton runat="server" ID="btnLogin" CssClass="btn btn-default submit" OnClick="btnLogin_Click" ValidationGroup="vgLogin">Entrar</asp:LinkButton>

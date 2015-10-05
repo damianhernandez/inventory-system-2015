@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebMenuElements.ascx.cs" Inherits="Inventarios2015.Account.WebMenuElements" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebMenuElements.ascx.cs" Inherits="Inventarios2015.WebUserControls.WebMenuElements" %>
 
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 

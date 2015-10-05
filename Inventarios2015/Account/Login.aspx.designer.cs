@@ -49,6 +49,24 @@ namespace Inventarios2015.Account {
         protected global::AjaxControlToolkit.ValidatorCalloutExtender revtxtUserNameExt;
         
         /// <summary>
+        /// Control rfvtxtUserName.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtUserName;
+        
+        /// <summary>
+        /// Control rfvtxtUserNameext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender rfvtxtUserNameext;
+        
+        /// <summary>
         /// Control txtPassword.
         /// </summary>
         /// <remarks>
@@ -56,6 +74,24 @@ namespace Inventarios2015.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        
+        /// <summary>
+        /// Control rfvtxtPassword.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtPassword;
+        
+        /// <summary>
+        /// Control rfvtxtPasswordExt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender rfvtxtPasswordExt;
         
         /// <summary>
         /// Control btnLogin.

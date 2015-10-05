@@ -31,13 +31,22 @@ namespace Inventarios2015 {
         protected global::System.Web.UI.HtmlControls.HtmlForm from1;
         
         /// <summary>
+        /// Control srManager.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager srManager;
+        
+        /// <summary>
         /// Control WebMenuElements.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::Inventarios2015.Account.WebMenuElements WebMenuElements;
+        protected global::Inventarios2015.WebUserControls.WebMenuElements WebMenuElements;
         
         /// <summary>
         /// Control btnLogout.
@@ -49,21 +58,30 @@ namespace Inventarios2015 {
         protected global::System.Web.UI.WebControls.LinkButton btnLogout;
         
         /// <summary>
-        /// Control FeaturedContent.
+        /// Control TituloSeccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder FeaturedContent;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder TituloSeccion;
         
         /// <summary>
-        /// Control MainContent.
+        /// Control FormaTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder FormaTitulo;
+        
+        /// <summary>
+        /// Control ContenidoPagina.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContenidoPagina;
     }
 }

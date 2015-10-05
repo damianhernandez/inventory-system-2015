@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Inventarios2015.Account
+namespace Inventarios2015.WebUserControls
 {
     public partial class WebMenuElements : System.Web.UI.UserControl
     {

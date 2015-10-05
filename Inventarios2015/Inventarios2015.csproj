@@ -67,7 +67,7 @@
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\ManageUsers.aspx" />
-    <Content Include="Account\WebMenuElements.ascx" />
+    <Content Include="WebUserControls\WebMenuElements.ascx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\custom.css" />
@@ -93,11 +93,11 @@
     <Compile Include="Account\ManageUsers.aspx.designer.cs">
       <DependentUpon>ManageUsers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\WebMenuElements.ascx.cs">
+    <Compile Include="WebUserControls\WebMenuElements.ascx.cs">
       <DependentUpon>WebMenuElements.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\WebMenuElements.ascx.designer.cs">
+    <Compile Include="WebUserControls\WebMenuElements.ascx.designer.cs">
       <DependentUpon>WebMenuElements.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -119,6 +119,7 @@
   <ItemGroup>
     <Content Include="Site01.Master" />
     <Content Include="packages.config" />
+    <Content Include="Account\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
