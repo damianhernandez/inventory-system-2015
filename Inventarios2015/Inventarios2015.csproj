@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\ManageRoles.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\ManageUsers.aspx" />
     <Content Include="WebUserControls\WebMenuElements.ascx" />
@@ -79,6 +80,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\ManageRoles.aspx.cs">
+      <DependentUpon>ManageRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageRoles.aspx.designer.cs">
+      <DependentUpon>ManageRoles.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,7 +136,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Componentes\" />
     <Folder Include="fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InventariosData\InventariosData.csproj">
+      <Project>{4282b9c5-0f20-4375-b0b2-3251ff425cc9}</Project>
+      <Name>InventariosData</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

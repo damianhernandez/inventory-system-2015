@@ -10,76 +10,57 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPagina" runat="server">
-        <div class="item form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="userName">
-            Nombre de Usuario <span class="required">*</span>
-        </label>
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <asp:TextBox runat ="server" ID="txtUserName" cssclass="form-control col-md-7 col-xs-12" placeholder="Nombre de usuario" ValidationGroup="addUsers"></asp:TextBox>
-            <asp:RequiredFieldValidator runat="server" ID="rfvtxtUserName" ControlToValidate ="txtUserName" ErrorMessage="<b>Campo obligatorio.</b><br/>Se necesita un nombre de usuario." Display="None" ValidationGroup="addUsers">*</asp:RequiredFieldValidator>
-            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="rfvtxtUserNameExt" TargetControlID="rfvtxtUserName" WarningIconImageUrl="~/images/warning32.png" ></ajaxToolkit:ValidatorCalloutExtender>
-        </div>
-    </div>
     <div class="item form-group">
         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">
-            Email <span class="required">*</span>
+            Correo: <span class="required">*</span>
         </label>
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+            <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control col-md-7 col-xs-12" placeholder="Email" TextMode="Email" ValidationGroup="addUsers"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvtxtEmail" ControlToValidate="txtEmail" ErrorMessage="<b>Campo obligatorio.</b><br/>Se necesita la direccion de correo electrónico." Display="None" ValidationGroup="addUsers">*</asp:RequiredFieldValidator>
+            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="rfvtxtEmailExt" TargetControlID="rfvtxtEmail" WarningIconImageUrl="~/images/warning32.png"></ajaxToolkit:ValidatorCalloutExtender>
         </div>
     </div>
     <div class="item form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">
-            Confirm Email <span class="required">*</span>
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="confirmEmail">
+            Confirmación de Correo: <span class="required">*</span>
         </label>
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
+            <asp:TextBox runat="server" ID="txtConfirmEmail" CssClass="form-control col-md-7 col-xs-12" placeholder="Confirma Email" TextMode="Email" ValidationGroup="addUsers"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvtxtConfirmEmail" ControlToValidate="txtConfirmEmail" ErrorMessage="<b>Campo obligatorio.</b><br/>Necesita confirmar su cuenta de Correo." Display="None" ValidationGroup="addUsers">*</asp:RequiredFieldValidator>
+            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="rfvtxtConfirmEmailExt" TargetControlID="rfvtxtConfirmEmail" WarningIconImageUrl="~/images/warning32.png"></ajaxToolkit:ValidatorCalloutExtender>
         </div>
     </div>
     <div class="item form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
-            Number <span class="required">*</span>
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Password">
+            Contraseña: <span class="required">*</span>
         </label>
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <input type="number" id="number" name="number" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
+            <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control col-md-7 col-xs-12" placeholder="Contraseña" TextMode="Password" ValidationGroup="addUsers"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvtxtPassword" ControlToValidate="txtPassword" ErrorMessage="<b>Campo obligatorio.</b><br/>Necesita confirmar su cuenta de Correo." Display="None" ValidationGroup="addUsers">*</asp:RequiredFieldValidator>
+            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="rfvtxtPasswordExt" TargetControlID="rfvtxtPassword" WarningIconImageUrl="~/images/warning32.png"></ajaxToolkit:ValidatorCalloutExtender>
         </div>
     </div>
     <div class="item form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">
-            Website URL <span class="required">*</span>
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtPasswordQuestion">
+            Pregunta Secreta: <span class="required">*</span>
         </label>
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <input type="url" id="website" name="website" required="required" placeholder="www.website.com" class="form-control col-md-7 col-xs-12">
+            <asp:TextBox runat="server" ID="txtPasswordQuestion" CssClass="form-control col-md-7 col-xs-12" placeholder="Pregunta Secreta" ValidationGroup="addUsers"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvtxtPasswordQuestion" ControlToValidate="txtPasswordQuestion" ErrorMessage="<b>Campo obligatorio.</b><br/>Necesita una pregunta secreta para continuar." Display="None" ValidationGroup="addUsers">*</asp:RequiredFieldValidator>
+            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="rfvtxtPasswordQuestionExt" TargetControlID="rfvtxtPasswordQuestion" WarningIconImageUrl="~/images/warning32.png"></ajaxToolkit:ValidatorCalloutExtender>
         </div>
     </div>
     <div class="item form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">
-            Occupation <span class="required">*</span>
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtPasswordAnswer">
+            Respuesta Secreta: <span class="required">*</span>
         </label>
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <input id="occupation" type="text" name="occupation" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
+            <asp:TextBox runat="server" ID="txtPasswordAnswer" CssClass="form-control col-md-7 col-xs-12" placeholder="Respuesta Secreta" ValidationGroup="addUsers"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvtxtPasswordAnswer" ControlToValidate="txtPasswordAnswer" ErrorMessage="<b>Campo obligatorio.</b><br/>Necesita confirmar su cuenta de Correo." Display="None" ValidationGroup="addUsers">*</asp:RequiredFieldValidator>
+            <ajaxToolkit:ValidatorCalloutExtender runat="server" ID="txtPasswordAnswerExt" TargetControlID="rfvtxtPasswordAnswer" WarningIconImageUrl="~/images/warning32.png"></ajaxToolkit:ValidatorCalloutExtender>
         </div>
     </div>
-    <div class="item form-group">
-        <label for="password" class="control-label col-md-3">Password</label>
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-        </div>
-    </div>
-    <div class="item form-group">
-        <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Repeat Password</label>
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
-        </div>
-    </div>
-    <div class="item form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">
-            Textarea <span class="required">*</span>
-        </label>
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <textarea id="textarea" required="required" name="textarea" class="form-control col-md-7 col-xs-12"></textarea>
-        </div>
-    </div>
+   
     <div class="ln_solid"></div>
     <div class="form-group">
         <div class="col-md-6 col-md-offset-3">

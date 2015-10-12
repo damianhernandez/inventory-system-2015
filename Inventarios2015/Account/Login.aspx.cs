@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
+using InventariosData.Controles;
 
 namespace Inventarios2015.Account
 {
@@ -19,11 +20,12 @@ namespace Inventarios2015.Account
         {
             if (Membership.Provider.ValidateUser(txtUserName.Text.Trim(), txtPassword.Text.Trim()))
             {
-                Server.Transfer("~/Default.aspx");
+                Session["Username"] = User.Identity.Name;
+                FormsAuthentication.RedirectFromLoginPage(txtUserName.Text.Trim(), true);
             }
             else
             {
-                Response.Write("<div class=\"alert alert-danger\"><b>Error:&nbsp;&nbsp;&nbsp;</b>El usuario y contraseña proporcionados no son validos, por favor verifique sus datos e intentelo mas tarde.</div>");
+                MessageAlert.show(MessageAlert.alertType.danger, "El usuario y contraseña proporcionados no son validos, por favor verifique sus datos e intentelo mas tarde.");
             }
         }
     }

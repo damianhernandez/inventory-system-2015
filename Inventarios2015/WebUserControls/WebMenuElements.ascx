@@ -2,7 +2,7 @@
 
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
-                            <div class="menu_section">  <!--Establece el título del menu-->
+                            <%--<div class="menu_section">  <!--Establece el título del menu-->
                                 <h3>General</h3>        <!--título del menu-->
                                 <ul class="nav side-menu">
                                     <li><a><i class="fa fa-home"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
@@ -110,7 +110,7 @@
                                     <li><a><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>--%>
 
 
 
@@ -130,16 +130,16 @@
             </div>
     </AnonymousTemplate>
     <RoleGroups>
-        <asp:RoleGroup Roles="Administrador">
+        <asp:RoleGroup Roles="Administradores">
             <ContentTemplate>
                 <div class="menu_section">  <!--Establece el título del menu-->
                                 <h3>General</h3>        <!--título del menu-->
                                 <ul class="nav side-menu">
-                                    <li><a><i class="fa fa-home"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <li><a><i class="fa fa-user"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu" style="display: none">
-                                            <li><a href="index.html">Usuarios</a>
+                                            <li><asp:LinkButton runat="server" ID="lnkMenuUsuarios" PostBackUrl="~/account/ManageUsers.aspx">Usuarios</asp:LinkButton>
                                             </li>
-                                            <li><a href="index2.html">Roles</a>
+                                            <li><asp:LinkButton runat="server" ID="lnkMenuRoles" PostBackUrl="~/account/ManageRoles.aspx">Grupos</asp:LinkButton>
                                             </li>
                                         </ul>
                                     </li>

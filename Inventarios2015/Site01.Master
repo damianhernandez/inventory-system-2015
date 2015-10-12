@@ -223,7 +223,7 @@
                                             <a href="javascript:;">Help</a>
                                         </li>
                                         <li>
-                                            <asp:LinkButton runat ="server" ID="btnLogout"><i class="fa fa-sign-out pull-right"></i> Cerrar Sesión</asp:LinkButton>
+                                            <asp:LinkButton runat ="server" ID="btnLogout" OnClick="btnLogout_Click"><i class="fa fa-sign-out pull-right"></i> Cerrar Sesión</asp:LinkButton>
                                         </li>
                                     </ul>
                                 </li>

@@ -14,5 +14,12 @@ namespace Inventarios2015
         {
             
         }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            Response.Redirect("~/Account/Login.aspx");
+        }
     }
 }
